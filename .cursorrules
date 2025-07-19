@@ -1,0 +1,64 @@
+# Cursor Project Rules
+
+This file outlines the project configuration and conventions to help AI assistants understand and interact with this codebase more effectively.
+
+## Project Overview
+
+- **Project Type**: `sveltekit`
+- **Primary Language**: `typescript`
+- **Key Frameworks & Libraries**:
+  - `tailwindcss`
+  - `drizzle`
+  - `lucia`
+  - `mdsvex`
+- **Testing Framework**: `vitest`
+- **Linter**: `eslint`
+- **Formatter**: `prettier`
+- **Package Manager**: `npm`
+
+## Directory Structure
+
+- **Source Directory**: `src`
+- **Routes Directory**: `src/routes`
+- **Components Directory**: `src/lib/components` (assumed convention)
+- **Library Directory**: `src/lib`
+- **Database Schema**: `src/lib/server/db/schema.ts` (assumed convention)
+- **Static Assets Directory**: `static`
+
+## Important Files
+
+- `svelte.config.js`
+- `vite.config.ts`
+- `tsconfig.json`
+- `package.json`
+- `drizzle.config.ts`
+- `src/hooks.server.ts`
+- `src/hooks.client.ts`
+- `src/service-worker.ts`
+- `.env`
+
+## Preferred Shell Commands
+
+- **Development Server**: `npm run dev`
+- **Build Project**: `npm run build`
+- **Preview Build**: `npm run preview`
+- **Run Tests**: `npm run test`
+- **Lint Code**: `npm run lint`
+- **Format Code**: `npm run format`
+- **Push DB Schema Changes**: `npm run db:push`
+- **Generate DB Migrations/Client**: `npm run db:generate` (if applicable)
+- **Open DB Studio**: `npm run db:studio` (if applicable)
+
+## General Instructions & Conventions
+
+- This is a SvelteKit project using **Svelte 5** and TypeScript. When you are asked to make changes, always use Svelte 5 syntax and features. Be sure to check this.
+- UI is built with Svelte components and styled with Tailwind CSS.
+- Content can be managed with MDsveX.
+- Authentication is handled by Lucia.
+- The database is SQLite, managed with Drizzle ORM.
+- Tests are written with Vitest.
+- Code is linted with ESLint and formatted with Prettier.
+- Use npm for package management.
+- Follow SvelteKit conventions for file structure and routing.
+- Server-side logic, including database interactions and authentication, typically resides in `src/lib/server` or within `+page.server.ts` and `+server.ts` files.
+- Ensure database schema changes are migrated using `npm run db:push`.
